@@ -1,43 +1,85 @@
-<html lang= "pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR">
 
 <head>
-   <metacharset="UTF-8">
-        <meta name="viewport" content " width=device-widt, initial-scale=1.0">
-		<title>ATV 05</title>
-</head>		
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATV 05</title>
+</head> 
+
+<body>    
 <header>
-	<h1>Portal multimidia</h1>	
-		<p>Explore o universo da computação,programação e inovação.</p>
-	<nav>	
-		<p> | <a href="galeria">galeria<a/> | <a href="Podcast">Podcast<a/> | <a href="Video">Video<a/> | <a href="Componentes">Componentes<a/> | <a href="Bliblioteca">Biblioteca<a/> | <a href="Matematica">Matematica<a/> | </p>
-	</nav>
+    <h1>Portal multimídia</h1>    
+    <p>Explore o universo da computação, programação e inovação.</p>
+    <nav>    
+        <p> 
+            | <a href="galeria">galeria</a> 
+            | <a href="Podcast">Podcast</a> 
+            | <a href="Video">Video</a> 
+            | <a href="Componentes">Componentes</a> 
+            | <a href="Bliblioteca">Biblioteca</a> 
+
+            | <a href="Matematica">Matematica</a> | 
+        </p>
+    </nav>
 </header>
- <hr />	
+<hr />    
  
 <section>
-	<h2>Galeria de Tecnologia </h2>	
-		<figure>
-			<img src="img/computador.jpg" height="30%" width="30%"/>
-				<figcaption>Estaçao de desenvolvimento</figcaption>
-		</figure>
-		<figure>
-			<img src="img/robotica.jpg" height="30%" width="30%"/>
-			<figcaption>Robótica e automaçao.</figcaption>
-		</figure>		
+    <h2>Galeria de Tecnologia</h2>    
+    <figure>
+        <img src="img/computador.jpg" alt="Estação de desenvolvimento" width="300px" />
+        <figcaption>Estação de desenvolvimento</figcaption>
+    </figure>
+    <figure>
+        <img src="img/robotica.jpg" alt="Robótica e automação" width="300px" />
+        <figcaption>Robótica e automação.</figcaption>
+    </figure>        
 </section>
+
 <section>
-		<h3>Imagem responsiva </h3>
-			<picture>
-				<source media="(min-width: 1024px)" srcset="img/lula.jpg" type="image/jpg">
-					<source media="(max-width: 768px)" srcset="img/bolsonaro.jpg" type="image/jpg">
-						<img src="img/lula.jpg" alt="imagen de um laboratorio aleatorio" />
-		<p>A tecnologia está presente no desenvolvimento de sistemas, na automoção e na comunicação.</p>		
+    <h3>Imagem responsiva</h3>
+    <picture>
+        <source media="(min-width: 1024px)" srcset="img/lula.jpg" type="image/jpeg">
+        <source media="(max-width: 768px)" srcset="img/bolsonaro.jpg" type="image/jpeg">
+        <img src="img/lula.jpg" alt="imagem de um laboratorio aleatorio" />
+    </picture>
+    <p>A tecnologia está presente no desenvolvimento de sistemas, na automação e na comunicação.</p>        
 </section>
+
 <section>
-		<h2>Podcast de Tecnologia<h2>
-			<h3>O futuro da programação<h3>
-				<p>Neste episóodio, discutimos linguagens de programação, inteligência artificial e carreira.<p>
-			<audio 	controls>
-				<source src="DevNaEstrada.mp3" type="audio/mpeg" />
-			</audio	
-				
+    <h2>Podcast de Tecnologia</h2>
+    <h3>O futuro da programação</h3>
+    <p>Neste episódio, discutimos linguagens de programação, inteligência artificial e carreira.</p>
+    <audio controls>
+        <source src="DevNaEstrada.mp3" type="audio/mpeg" />
+    </audio>    
+</section>    
+<hr />
+
+<section>
+    <h2>Aula em Vídeo</h2>
+    <p>Introdução à programação</p>
+    <video controls width="480"> 
+        <source src="aula.mp4" type="video/mp4" /> 
+        <track src="img/legenda.vtt" kind="subtitles" srclang="pt-BR" label="Português" default /> 
+    </video>    
+	<p>Assistir á aula e acompanhe as legendas disoníveis no reprodutor</p>
+</section>
+<hr />
+<section>
+	<h2>Mapa Interativo de Componentes</h2>
+		<p>Clique na area correspondente para conhecer difirentes componentes de um computador.</p>
+		<img src="img/imagen123.jpg" alt="imagem clicavel" usemap="#usar_mapa" />
+		<map name ="#usar_mapa"/>
+			<area shape="rect" coords="10,195,325,248" href="#processadores" alt="processador" /> 
+			<!--<area shape="rect" coords="10,309,325,352" href="#memoria" alt="memoria" /> 
+			<area shape="rect" coords="10,423,325,406" href="#armazenamento(ssd/hd)" alt="armazenamento(ssd/hd)" /> -->
+		<p>Assista á aula e acompanhe as legendas disponíveis no reprodutor.</p>
+		<h3>Processador</h3>
+		<p>Executa intruções e realiza operac
+</section>			
+	<hr />	
+<hr/>
+</body>
+</html>
