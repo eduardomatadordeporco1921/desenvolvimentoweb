@@ -2,214 +2,90 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Sistema de Controle de Equipamentos de TI</title>
+    <title>ATV06</title>
 </head>
 <body>
-
     <header>
-        <h1>Painel de Controle do Setor de TI</h1>
-        <p>Sistema interno para gerenciamento, inventário e monitoramento de ativos tecnológicos.</p>
+     <h1>Portal de Gestão de Hardware</h1>
+	 <p>Sistema de controle de equipamentos, patrimônio e manutenção do setor de Tecnologia da Informação.</p>
     </header>
-
-    <main>
-        
-        <section>
-            <h2>1. Inventário de Equipamentos</h2>
-            <table>
-                <caption>Inventário de Hardware</caption>
-                <colgroup>
-                    <col style="width: 15%;">
-                    <col style="width: 35%;">
-                    <col style="width: 20%;">
-                    <col style="width: 15%;">
-                    <col style="width: 15%;">
-                </colgroup>
-                <thead>
-                    <tr>
-                        <th scope="col">Código de Patrimônio</th>
-                        <th scope="col">Equipamento</th>
-                        <th scope="col">Categoria</th>
-                        <th scope="col">Quantidade Disponível</th>
-                        <th scope="col">Valor Unitário (R$)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>PAT-001</td>
-                        <td>Notebook Dell Latitude 3420</td>
-                        <td>Computadores</td>
-                        <td>12</td>
-                        <td>4500.00</td>
-                    </tr>
-                    <tr>
-                        <td>PAT-002</td>
-                        <td>Monitor LG 24 Polegadas</td>
-                        <td>Periféricos</td>
-                        <td>25</td>
-                        <td>850.00</td>
-                    </tr>
-                    <tr>
-                        <td>PAT-003</td>
-                        <td>Switch Cisco Catalyst 2960</td>
-                        <td>Redes</td>
-                        <td>4</td>
-                        <td>3200.00</td>
-                    </tr>
-                    <tr>
-                        <td>PAT-004</td>
-                        <td>Teclado e Mouse sem fio Logitech</td>
-                        <td>Periféricos</td>
-                        <td>30</td>
-                        <td>150.00</td>
-                    </tr>
-                    <tr>
-                        <td>PAT-005</td>
-                        <td>Servidor Torre PowerEdge T150</td>
-                        <td>Servidores</td>
-                        <td>2</td>
-                        <td>12000.00</td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td colspan="3"><strong>Total Geral do Inventário</strong></td>
-                        <td><strong>73 unidades</strong></td>
-                        <td><strong>R$ 57.150,00</strong></td>
-                    </tr>
-                </tfoot>
-            </table>
-        </section>
-
-        <hr>
-
-     
-        <section>
-            <h2>2. Cadastro de Novos Equipamentos</h2>
-            <form action="#" method="post">
-                
-              
-                <fieldset>
-                    <legend>Identificação do Equipamento</legend>
-                    
-                    <p>
-                        <label for="nome-equipamento">Nome do Equipamento:</label><br>
-                        <input type="text" id="nome-equipamento" name="nome_equipamento" list="sugestoes-equipamentos" placeholder="Ex: Notebook Corporativo" required>
-                        <datalist id="sugestoes-equipamentos">
-                            <option value="Notebook Dell Latitude">
-                            <option value="Monitor UltraWide LG">
-                            <option value="Roteador Wi-Fi 6">
-                            <option value="Impressora Multifuncional Laser">
-                            <option value="Switch Gerenciavel 24 Portas">
-                        </datalist>
-                    </p>
-
-                    <p>
-                        <label for="codigo-patrimonio">Código de Patrimônio:</label><br>
-                        <input type="text" id="codigo-patrimonio" name="codigo_patrimonio" placeholder="PAT-000" pattern="PAT-[0-9]{3}" title="O formato deve ser PAT- seguido de 3 números (ex: PAT-123)" required>
-                    </p>
-                </fieldset>
-
-             
-                <fieldset>
-                    <legend>Aquisição e Responsabilidade</legend>
-                    
-                    <p>
-                        <label for="data-aquisicao">Data de Aquisição:</label><br>
-                        <input type="date" id="data-aquisicao" name="data_aquisicao" required>
-                    </p>
-
-                    <p>
-                        <label for="email-responsavel">E-mail do Responsável:</label><br>
-                        <input type="email" id="email-responsavel" name="email_responsavel" placeholder="tecnico@empresa.com" required>
-                    </p>
-                </fieldset>
-
-                
-                <fieldset>
-                    <legend>Classificação e Estado Físico</legend>
-
-                    <p>
-                        <label for="categoria">Categoria:</label><br>
-                        <select id="categoria" name="categoria" required>
-                            <option value="" disabled selected>Selecione uma categoria</option>
-                            <optgroup label="Processamento e Dados">
-                                <option value="computadores">Computadores</option>
-                                <option value="servidores">Servidores</option>
-                            </optgroup>
-                            <optgroup label="Infraestrutura e Acessórios">
-                                <option value="redes">Redes</option>
-                                <option value="perifericos">Periféricos</option>
-                            </optgroup>
-                        </select>
-                    </p>
-
-                    <p>
-                        <label for="estado-conservacao">Estado de Conservação:</label><br>
-                        <select id="estado-conservacao" name="estado_conservacao" required>
-                            <option value="novo">Novo</option>
-                            <option value="bom">Bom</option>
-                            <option value="regular">Regular</option>
-                            <option value="manutencao">Necessita Manutenção</option>
-                        </select>
-                    </p>
-                </fieldset>
-
-               
-                <fieldset>
-                    <legend>Estoque, Valor e Observações</legend>
-
-                    <p>
-                        <label for="quantidade">Quantidade:</label><br>
-                        <input type="number" id="quantidade" name="quantidade" min="1" max="1000" value="1" required>
-                    </p>
-
-                    <p>
-                        <label for="valor-unitario">Valor Unitário (R$):</label><br>
-                        <input type="number" id="valor-unitario" name="valor_unitario" step="0.01" min="0.01" placeholder="0.00" required>
-                    </p>
-
-                    <p>
-                        <label for="descricao">Descrição ou Observações:</label><br>
-                        <textarea id="descricao" name="descricao" rows="4" cols="40" placeholder="Insira detalhes adicionais, especificações ou número de série..."></textarea>
-                    </p>
-                </fieldset>
-
-                <p>
-                    <button type="submit">Cadastrar Equipamento</button>
-                    <button type="reset">Limpar Formulário</button>
-                </p>
-
-            </form>
-        </section>
-
-        <hr>
-
-     
-        <section>
-            <h2>3. Painel de Indicadores do Setor</h2>
-            
-            <div>
-                <p><strong>Demonstrativo de Equipamentos Cadastrados:</strong></p>
-                <p>Total de itens ativos registrados no sistema: <output name="resultado-total" for="quantidade">73</output> unidades</p>
-            </div>
-
-            <div>
-                <p><strong>Percentual de Ocupação do Espaço de Armazenamento (Almoxarifado de TI):</strong></p>
-                <p>Ocupação atual em relação à capacidade máxima de armazenamento de peças e equipamentos:</p>
-                <meter value="0.75" min="0" max="1" low="0.3" high="0.8" optimum="0.2">75%</meter>
-            </div>
-
-            <div>
-                <p><strong>Andamento da Manutenção Preventiva Trimestral:</strong></p>
-                <p>Progresso da verificação e atualização dos servidores e estações de trabalho:</p>
-                <progress value="60" max="100">60%</progress>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Setor de Tecnologia da Informação. Todos os direitos reservados.</p>
-    </footer>
-
+<hr />
+<section>
+		<h2>1. Inventário de equipamentos</h2>
+			<p>consulte os equipamentos disponiveis no estoque, suas quantidades e seus respectivos valores.</p>
+		<table border="1">	
+			<caption>Inventario de Hardware da Empresa</caption>
+			<thead>
+			<tr>
+				<th scope="col">Patrimônio</th>
+				<th>Equipamento</th>
+				<th>Categoria</th>
+				<th>Quantidade</th>
+				<th>Valor unitário</th>
+			</tr>	
+			</thead>
+			<tbody>
+				<tr>
+					<td>EQ001</td>
+					<td>Notebook Dell</td>
+					<td>Computador</td>
+					<td>5</td>
+					<td>R$ 3.000,00</td>
+				</tr>
+				<tr>
+						<td>EQ002</td>
+						<td>Monitor Full HD</td>
+						<td>Periférico</td>
+						<td>8</td>
+						<td>R$800,00</td>
+				</tr>
+				<tr>
+						<td>EQ003</td>
+						<td>Teclado USB</td>
+						<td>Periférico</td>
+						<td>12</td>
+						<td>R$100,00</td>
+				</tr>
+				<tr>
+						<td>EQ004</td>
+						<td>Desktop corporativo</td>
+						<td>Computador</td>
+						<td>3</td>
+						<td>R$4,500,00</td>
+				</tr>
+				<tr>
+				<td>EQ005</td>
+				<td>Impressora de rede</td>
+				<td>Impressão</td>
+				<td>2</td>
+				<td>R$1.200,00</td>
+				</tr>
+			</tbody>
+			<tfoot>
+			<tr>
+			<th colspan="3" scope="rows">Total de equipamentos</th>
+			<td>30</td>
+			<td>---</td>
+			</tr>
+			<tr>
+			<th colspan="3" scope="rows">Valor total estimado do Inventario</th>
+			<td>R$38.500,00</td>
+			</tr>
+			</tfoot>
+		</table>
+		<h2>2.Cadastro de equipamentos</h2>
+			<p>prencha os dados abaixo para registrar um novo equipamento no inventario</p>
+		<form>	
+		 <fieldset>
+		 <legend>identificação do Equipamento</legend>
+		<p>
+		<label>nome do equipamento</label>
+		<input type="text" placeholder="Digite o nome" />
+		
+		
+		
+		</p>	
+		 </fieldset>
+		</form>
 </body>
 </html>
